@@ -4,7 +4,7 @@
 ###   @Author: Ziang Liu
 ###   @Date: 2020-11-25 19:04:29
 ###   @LastEditors: Ziang Liu
-###   @LastEditTime: 2021-04-29 13:25:10
+###   @LastEditTime: 2021-04-29 15:44:29
 ###   @Copyright (C) 2020 SJTU. All rights reserved.
 ###################################################################
 
@@ -25,7 +25,7 @@ if __name__=="__main__":
     from UI import UI1, UI2
 
     project = PageManager(DEBUG, size=size, side=side_config, top='')
-    project.initialize(UI1(project), UI2())
+    project.initialize(UI1(project), UI2(project))
     project.show()
     
     sys.exit(app.exec_())

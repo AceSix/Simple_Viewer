@@ -4,7 +4,7 @@
 ###   @Author: Ziang Liu
 ###   @Date: 2020-11-26 19:25:34
 ###   @LastEditors: Ziang Liu
-###   @LastEditTime: 2021-04-03 17:42:54
+###   @LastEditTime: 2021-04-29 16:27:54
 ###   @Copyright (C) 2020 SJTU. All rights reserved.
 ###################################################################
 
@@ -33,7 +33,8 @@ class VerticalScrollArea(QScrollArea):
         self.widget().setMinimumHeight(new_w*self.widget().total_ratio)
         
 class UI2(Template):
-    def __init__(self):
+    def __init__(self, manager):
+        self.manager = manager
         super(UI2, self).__init__()
     
     def __setup__(self):
@@ -44,20 +45,27 @@ class UI2(Template):
         # self.Pic_region.setBackgroundRole(QtGui.QPalette.Base)
         self.scrollarea = VerticalScrollArea()
         self.scrollarea.setWidget(self.Pic_region)
+        self.scrollarea.verticalScrollBar().setSingleStep(50)
+
         # scroll1.setBackgroundRole(QtGui.QPalette.Dark)
 
         next_chapter = Button(None, 'next', style=leaf_button_style)
         next_chapter.clicked.connect(self.__next_chapter__)
         previous_chapter = Button(None, 'previous', style=leaf_button_style)
         previous_chapter.clicked.connect(self.__previous_chapter__)
+        back_menu = Button(None, 'back', style=leaf_button_style)
+        back_menu.clicked.connect(self.__back__)
         control_region = Layout([
-            'space', previous_chapter, self.chapter_selector, next_chapter, 'space'
+            back_menu, previous_chapter, self.chapter_selector, next_chapter, 'space'
         ], [1,1,3,1,1], True)
 
         layout = Layout([
             control_region, self.scrollarea
         ], [1,20], False)
         self.setLayout(layout)
+
+    def __back__(self):
+        self.manager.interface.work_space.setCurrentIndex(0)
 
     def __next_chapter__(self):
         chapter_id = self.chapter_selector.currentIndex()
@@ -100,6 +108,7 @@ class UI2(Template):
         # print(list(map(lambda x:re.findall(f"\d+", os.path.basename(x))[0], self.chapter_dirs)))
         self.chapters = [os.path.basename(d) for d in self.chapter_dirs]
 
+        self.chapter_selector.clear()
         self.chapter_selector.addItems(self.chapters)
         images = load_images(self.chapter_dirs[0])
         self.Pic_region.set_up(images)

@@ -4,7 +4,7 @@
 ###   @Author: Ziang Liu
 ###   @Date: 2021-04-29 11:08:55
 ###   @LastEditors: Ziang Liu
-###   @LastEditTime: 2021-04-29 13:30:42
+###   @LastEditTime: 2021-04-29 15:32:28
 ###   @Copyright (C) 2021 SJTU. All rights reserved.
 ###################################################################
 
@@ -22,7 +22,7 @@ headers = {
     }
 
 
-def download(comic_name, comic_id):
+def download(comic_name, comic_id, headers):
     req = requests.get(baseURL+f'/comic/{comic_id}', headers=headers)
     html = req.text
     table_bf = BeautifulSoup(html)
@@ -55,4 +55,4 @@ def download(comic_name, comic_id):
 
 
 ### may require VPN
-download('is the order a rabbit', 11064)
+download('zombie2', 36649, headers)

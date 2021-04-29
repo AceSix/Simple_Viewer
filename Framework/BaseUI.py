@@ -4,7 +4,7 @@
 ###   @Author: Ziang Liu
 ###   @Date: 2020-11-26 19:25:34
 ###   @LastEditors: Ziang Liu
-###   @LastEditTime: 2021-04-29 13:26:55
+###   @LastEditTime: 2021-04-29 15:45:38
 ###   @Copyright (C) 2020 SJTU. All rights reserved.
 ###################################################################
 
@@ -27,7 +27,7 @@ class BaseUI(QtWidgets.QWidget):
         
         self.__base_layout__(MainWindow)
         
-        MainWindow.setWindowTitle("FDD-master")
+        MainWindow.setWindowTitle("Comic Reader")
         if not MainWindow.debug:
             MainWindow.setWindowFlags(Qt.FramelessWindowHint)  # 去掉标题栏
         MainWindow.setCentralWidget(self)

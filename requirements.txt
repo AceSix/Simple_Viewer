@@ -13,3 +13,4 @@ PyQt5
 bs4
 tqdm
 lzstring
+lxml

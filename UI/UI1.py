@@ -4,7 +4,7 @@
 ###   @Author: Ziang Liu
 ###   @Date: 2020-11-25 19:04:29
 ###   @LastEditors: Ziang Liu
-###   @LastEditTime: 2021-04-29 13:26:35
+###   @LastEditTime: 2021-04-29 16:21:41
 ###   @Copyright (C) 2020 SJTU. All rights reserved.
 ###################################################################
 
@@ -54,14 +54,18 @@ class UI1(Template):
 
     def openFile(self):
         root = QFileDialog.getExistingDirectory(self,"选取文件","./")
-        comic_dirs = os.listdir(root)
-
-        items = []
-        for dir in comic_dirs:
-            if os.path.isdir(os.path.join(root, dir)):
-                items.append(os.path.join(root, dir))
-        self.combo.clear()
-        self.combo.addItems(items)
+        
+        try:
+            comic_dirs = os.listdir(root)
+            items = []
+            for dir in comic_dirs:
+                if os.path.isdir(os.path.join(root, dir)):
+                    items.append(os.path.join(root, dir))
+            self.combo.clear()
+            self.combo.addItems(items)
+        except:
+            self.info.setText('place select a valid path')
+            pass
 
         
 
