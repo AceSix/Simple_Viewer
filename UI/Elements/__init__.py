@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 ###################################################################
-###   @FilePath: \Comic_Reader\UI\Elements\__init__.py
+###   @FilePath: \Simple_Viewer\UI\Elements\__init__.py
 ###   @Author: Ziang Liu
 ###   @Date: 2020-11-25 19:04:29
 ###   @LastEditors: Ziang Liu

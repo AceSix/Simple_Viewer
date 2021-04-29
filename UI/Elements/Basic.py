@@ -1,16 +1,14 @@
 # -*- coding:utf-8 -*-
 ###################################################################
-###   @FilePath: \PyQt5-FDD\UI\Elements\Basic.py
+###   @FilePath: \Simple_Viewer\UI\Elements\Basic.py
 ###   @Author: Ziang Liu
 ###   @Date: 2020-11-25 19:04:29
 ###   @LastEditors: Ziang Liu
-###   @LastEditTime: 2021-04-02 16:24:25
+###   @LastEditTime: 2021-04-29 13:29:25
 ###   @Copyright (C) 2020 SJTU. All rights reserved.
 ###################################################################
 
-from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QHBoxLayout, QVBoxLayout, QPushButton, QLabel, QTableWidget
-from PyQt5.QtGui import QPixmap, QMovie
 from util import group_stretch
 
 def Button(widget, text, name=None, style=None):

@@ -1,10 +1,10 @@
 # -*- coding:utf-8 -*-
 ###################################################################
-###   @FilePath: \Comic_Reader\UI\Elements\GroupItem.py
+###   @FilePath: \Simple_Viewer\UI\Elements\GroupItem.py
 ###   @Author: Ziang Liu
 ###   @Date: 2021-01-29 15:42:07
 ###   @LastEditors: Ziang Liu
-###   @LastEditTime: 2021-04-02 22:51:35
+###   @LastEditTime: 2021-04-29 13:21:25
 ###   @Copyright (C) 2021 SJTU. All rights reserved.
 ###################################################################
 
@@ -72,11 +72,6 @@ class GroupImage(QWidget):
         self.setLayout(layout)
 
         self.total_ratio = sum(image_ratios)
-
-    # def resizeEvent(self, e):
-    #     w = e.size().width()
-    #     h = e.size().height()
-    #     self.resize(w, int(w*self.total_ratio))
 
     
 

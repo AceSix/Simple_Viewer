@@ -4,7 +4,7 @@
 ###   @Author: Ziang Liu
 ###   @Date: 2021-04-29 11:08:55
 ###   @LastEditors: Ziang Liu
-###   @LastEditTime: 2021-04-29 11:15:47
+###   @LastEditTime: 2021-04-29 13:30:42
 ###   @Copyright (C) 2021 SJTU. All rights reserved.
 ###################################################################
 
@@ -53,4 +53,6 @@ def download(comic_name, comic_id):
                 f.write(getFile)
     print('download complete')
 
+
+### may require VPN
 download('is the order a rabbit', 11064)

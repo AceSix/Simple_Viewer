@@ -1,19 +1,17 @@
 # -*- coding:utf-8 -*-
 ###################################################################
-###   @FilePath: \Comic_Reader\Framework\BaseUI.py
+###   @FilePath: \Simple_Viewer\Framework\BaseUI.py
 ###   @Author: Ziang Liu
 ###   @Date: 2020-11-26 19:25:34
 ###   @LastEditors: Ziang Liu
-###   @LastEditTime: 2021-04-03 13:11:49
+###   @LastEditTime: 2021-04-29 13:26:55
 ###   @Copyright (C) 2020 SJTU. All rights reserved.
 ###################################################################
 
-from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtCore import Qt, QDate,  QDateTime , QTime
-from PyQt5.QtWidgets import QVBoxLayout, QHBoxLayout, QPushButton, QListWidget, QGridLayout, QDateEdit, QDateTimeEdit, QProgressBar
-from config.styles import main_style, sidebar_style
-from UI.Elements import Layout, Label, DateTimeEditDemo, ProgressBar
-from config.styles import title_style, transparent_style
+from PyQt5 import QtWidgets
+from PyQt5.QtCore import Qt
+from config.styles import main_style
+from UI.Elements import Layout
 # from canvas import base_button_icons
 
 class BaseUI(QtWidgets.QWidget):

@@ -1,20 +1,17 @@
 # -*- coding:utf-8 -*-
 ###################################################################
-###   @FilePath: \Comic_Reader\UI\UI1.py
+###   @FilePath: \Simple_Viewer\UI\UI1.py
 ###   @Author: Ziang Liu
 ###   @Date: 2020-11-25 19:04:29
 ###   @LastEditors: Ziang Liu
-###   @LastEditTime: 2021-04-02 18:21:30
+###   @LastEditTime: 2021-04-29 13:26:35
 ###   @Copyright (C) 2020 SJTU. All rights reserved.
 ###################################################################
 
 import os
-from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QComboBox, QFileDialog, QPushButton, QButtonGroup, QWidget
-from PyQt5.QtCore import pyqtSignal, Qt
+from PyQt5.QtWidgets import QComboBox, QFileDialog
 from .UI_template import Template
-from .Elements import Label, Button, GroupImage, Layout
-from numpy.random import randn as rand
+from .Elements import Label, Button, Layout
 from config.styles import leaf_button_style
 
 class UI1(Template):

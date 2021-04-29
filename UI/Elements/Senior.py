@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 ###################################################################
-###   @FilePath: \FDD-Industrial\UI\Elements\Senior.py
+###   @FilePath: \Simple_Viewer\UI\Elements\Senior.py
 ###   @Author: Ziang Liu
 ###   @Date: 2021-03-07 12:31:19
 ###   @LastEditors: Ziang Liu

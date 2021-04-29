@@ -1,19 +1,17 @@
 # -*- coding:utf-8 -*-
 ###################################################################
-###   @FilePath: \FDD-Industrial\UI\Elements\EmbedChart.py
+###   @FilePath: \Simple_Viewer\UI\Elements\EmbedChart.py
 ###   @Author: Ziang Liu
 ###   @Date: 2020-11-25 19:04:29
 ###   @LastEditors: Ziang Liu
-###   @LastEditTime: 2021-03-28 15:36:32
+###   @LastEditTime: 2021-04-29 13:29:41
 ###   @Copyright (C) 2020 SJTU. All rights reserved.
 ###################################################################
 
-from PyQt5 import QtWidgets
-from PyQt5.QtGui import QMovie, QImage, QPen, QPixmap
-from PyQt5.QtWidgets import QBoxLayout, QWidget, QSpacerItem, QLabel, QSizePolicy
-from PyQt5.QtCore import Qt, QPointF
+from PyQt5.QtGui import QMovie, QPixmap
+from PyQt5.QtWidgets import QBoxLayout, QSpacerItem, QLabel
+from PyQt5.QtCore import Qt
 from .Basic import Label, Layout
-from config import List2Qrect
 from config.styles import digit_board_style, digit_label_style
 
 class DigitBoard(QLabel):

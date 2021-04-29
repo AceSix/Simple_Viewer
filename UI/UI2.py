@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 ###################################################################
-###   @FilePath: \Comic_Reader\UI\UI2.py
+###   @FilePath: \Simple_Viewer\UI\UI2.py
 ###   @Author: Ziang Liu
 ###   @Date: 2020-11-26 19:25:34
 ###   @LastEditors: Ziang Liu
@@ -14,7 +14,7 @@ import glob
 from PyQt5.QtWidgets import QScrollArea, QComboBox
 from PyQt5.QtCore import Qt
 from .UI_template import Template
-from .Elements import Label, Button, GroupImage, Layout
+from .Elements import Button, GroupImage, Layout
 from config.styles import leaf_button_style
 from util import load_images
 

@@ -1,20 +1,11 @@
 # -*- coding:utf-8 -*-
 ###################################################################
-###   @FilePath: \Comic_Reader\Framework\Manager.py
+###   @FilePath: \Simple_Viewer\Framework\Manager.py
 ###   @Author: Ziang Liu
 ###   @Date: 2021-04-02 16:50:36
 ###   @LastEditors: Ziang Liu
-###   @LastEditTime: 2021-04-02 22:51:47
+###   @LastEditTime: 2021-04-29 13:30:08
 ###   @Copyright (C) 2021 SJTU. All rights reserved.
-###################################################################
-# -*- coding:utf-8 -*-
-###################################################################
-###   @FilePath: \PyQt5-FDD\Framework\Manager.py
-###   @Author: Ziang Liu
-###   @Date: 2020-11-25 19:04:29
-###   @LastEditors: Ziang Liu
-###   @LastEditTime: 2021-04-02 16:25:20
-###   @Copyright (C) 2020 SJTU. All rights reserved.
 ###################################################################
 
 from PyQt5.QtWidgets import QMainWindow

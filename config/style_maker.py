@@ -1,15 +1,14 @@
 # -*- coding:utf-8 -*-
 ###################################################################
-###   @FilePath: \FDD-Industrial\config\style_maker.py
+###   @FilePath: \Simple_Viewer\config\style_maker.py
 ###   @Author: Ziang Liu
-###   @Date: 2021-03-09 14:05:34
+###   @Date: 2021-04-29 13:24:30
 ###   @LastEditors: Ziang Liu
-###   @LastEditTime: 2021-03-09 16:44:42
-###   Copyright (C) 2021 SJTU. All rights reserved.
+###   @LastEditTime: 2021-04-29 13:28:19
+###   @Copyright (C) 2021 SJTU. All rights reserved.
 ###################################################################
-from util import get_resolution
-size = get_resolution()
-font_ratio = size[0]/1280.0
+
+font_ratio = 1.5
 
 abbreviation = {
     'bgd_color':'background-color',

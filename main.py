@@ -1,10 +1,10 @@
 # -*- coding:utf-8 -*-
 ###################################################################
-###   @FilePath: \Comic_Reader\main.py
+###   @FilePath: \Simple_Viewer\main.py
 ###   @Author: Ziang Liu
 ###   @Date: 2020-11-25 19:04:29
 ###   @LastEditors: Ziang Liu
-###   @LastEditTime: 2021-04-02 20:52:07
+###   @LastEditTime: 2021-04-29 13:25:10
 ###   @Copyright (C) 2020 SJTU. All rights reserved.
 ###################################################################
 
