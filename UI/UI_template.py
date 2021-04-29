@@ -1,15 +1,15 @@
 # -*- coding:utf-8 -*-
 ###################################################################
-###   @FilePath: \Simple_Viewer\UI\UI_template.py
+###   @FilePath: \FDD-Industrial\UI\UI_template.py
 ###   @Author: Ziang Liu
 ###   @Date: 2020-11-25 19:04:29
 ###   @LastEditors: Ziang Liu
-###   @LastEditTime: 2021-04-29 11:18:12
+###   @LastEditTime: 2021-03-13 17:43:21
 ###   @Copyright (C) 2020 SJTU. All rights reserved.
 ###################################################################
 
 
-from PyQt5 import QtGui, QtWidgets
+from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Template(QtWidgets.QWidget):
     def __init__(self):

@@ -4,7 +4,7 @@
 ###   @Author: Ziang Liu
 ###   @Date: 2021-04-02 16:50:36
 ###   @LastEditors: Ziang Liu
-###   @LastEditTime: 2021-04-02 16:50:52
+###   @LastEditTime: 2021-04-02 22:51:47
 ###   @Copyright (C) 2021 SJTU. All rights reserved.
 ###################################################################
 # -*- coding:utf-8 -*-
@@ -17,10 +17,7 @@
 ###   @Copyright (C) 2020 SJTU. All rights reserved.
 ###################################################################
 
-import sys 	
-from PyQt5.QtWidgets import QApplication, QMainWindow, QListWidget, QStatusBar, QDateEdit, QDateTimeEdit
-from PyQt5.QtCore import pyqtSignal
-from config.styles import leaf_button_style
+from PyQt5.QtWidgets import QMainWindow
 from .BaseUI import BaseUI
 
 class PageManager(QMainWindow):
