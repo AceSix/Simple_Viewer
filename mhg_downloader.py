@@ -3,8 +3,8 @@
 ###   @FilePath: \Simple_Viewer\mhg_downloader.py
 ###   @Author: Ziang Liu
 ###   @Date: 2021-04-29 11:08:55
-###   @LastEditors: Ziang Liu
-###   @LastEditTime: 2021-05-12 17:06:16
+###   @LastEditors: AceSix
+###   @LastEditTime: 2021-10-20 19:41:10
 ###   @Copyright (C) 2021 SJTU. All rights reserved.
 ###################################################################
 
@@ -29,15 +29,19 @@ addition_text = '''
 def download(comic_name, comic_id, headers):
     req = requests.get(baseURL+f'/comic/{comic_id}', headers=headers)
     html = req.text
-    # table_bf = BeautifulSoup(html)
-    # chapters = table_bf.find(attrs={'class': 'chapter cf mt16'}).find_all('a')
+    table_bf = BeautifulSoup(html)
+    chapter_col = table_bf.find_all(attrs={'class': 'chapter-list cf mt10'})
+    chapters = []
+    for col in chapter_col:
+        chapters += col.find_all('a')
 
-    table_bf = BeautifulSoup(addition_text)
-    chapters = table_bf.find_all('a')
+    # table_bf = BeautifulSoup(addition_text)
+    # chapters = table_bf.find_all('a')
 
     print(f"Totally {len(chapters)} chapters are found in {comic_name}.")
 
-    for chapter in tqdm.tqdm(chapters[47:]):
+    for chapter in tqdm.tqdm(chapters):
+    # for chapter in tqdm.tqdm(chapters[47:]):
         page_url = baseURL + chapter.attrs['href']
         chapter_name = chapter.text
         if chapter_name[0]!='第':
@@ -50,7 +54,7 @@ def download(comic_name, comic_id, headers):
             "Referer": refURL
         }
         
-        chapter_dir = os.path.join(f'./{comic_name}', chapter_name)
+        chapter_dir = os.path.join(f'./Comics/{comic_name}', chapter_name)
         os.makedirs(chapter_dir, exist_ok=True)
         for img_url in core_info['files']:
             mangaurl = imgURL+core_info['path']+re.match(r".*?\.[a-z]*", img_url).group(0)
@@ -62,5 +66,12 @@ def download(comic_name, comic_id, headers):
 
 
 ### may require VPN
-download('fire', 1147, headers)
+# download('fire', 1147, headers)
 # download('zombie2', 36649, headers)
+# download('rabbit', 11064, headers)
+# download('k-on-5-2', 1683, headers)
+# download('citrus1', 8150, headers)
+# download('citrus2', 33519, headers)
+# download('beU', 17201, headers)
+download('sing', 32156, headers)
+# download('zombie', 5125, headers)
